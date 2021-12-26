@@ -97,7 +97,7 @@ public class MailSender {
 		   + "<tr><img src='https://i.esdrop.com/d/52eukywkmujt/wWhKCdp2zE.png' style='width:700px; height:300px;'</tr>"
 		   + "<tr><td><span>안녕하세요. <strong>SpringCome</strong> 입니다.<br></span></td></tr>"
 		   + "<tr><td><br><span><strong>"+ sender +"</strong> 님이 <strong>SpringCome</strong>에서 함께 작업할 수 있도록 고객님을 초대하였습니다.</span></td></tr>"
-		   + "<tr><td><span><br><a href='http://localhost:7777/loginForm/"+ email +"'>지금 바로 클릭하여 참여하세요!!</a></span></td></tr></table>";
+		   + "<tr><td><span><br><a href='http://34.64.73.89:8080/loginForm/"+ email +"'>지금 바로 클릭하여 참여하세요!!</a></span></td></tr></table>";
 
 		MimeMessage msg = mail.createMimeMessage();
 		MimeMessageHelper helper;
