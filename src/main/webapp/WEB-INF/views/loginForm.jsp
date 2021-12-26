@@ -16,6 +16,7 @@
 	rel="stylesheet">
 <link href="${pageContext.request.contextPath }/assets/css/login.css"
 	rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="${pageContext.request.contextPath }/assets/images/springcome.ico">
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <title>로그인 페이지</title>
 </head>

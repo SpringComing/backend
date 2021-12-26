@@ -8,7 +8,7 @@
 <link
 	href="${pageContext.request.contextPath }/assets/css/jquery.modal.css"
 	rel="stylesheet" type="text/css">
-
+<link rel="shortcut icon" href="${pageContext.request.contextPath }/assets/images/springcome.ico">
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 
 <title>Insert title here</title>
