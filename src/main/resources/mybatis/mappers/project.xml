@@ -59,7 +59,7 @@
 		<![CDATA[
 		update attend
 		set  color=#{color }
-		where user_no = #{userNo } and project_no = #{ projectNo }
+		where project_no = #{ projectNo }
 		]]>
 	</update>
 
