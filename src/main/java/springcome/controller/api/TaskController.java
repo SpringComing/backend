@@ -208,7 +208,7 @@ public class TaskController {
 		
 		String[] fileUrl = fileVo.getUrl().split("/");
 		
-		String url =  "C:/upload-springcome/" + fileUrl[2];
+		String url =  "/upload-springcome/" + fileUrl[2];
 		byte[] binary = fileService.getFileBinary(url);
 		String base64data = Base64.getEncoder().encodeToString(binary);
 
