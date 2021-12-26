@@ -142,6 +142,12 @@ public class ProjectController {
 			return JsonResult.fail("세면 만료");
 		}
 		
+		
+		LOG.debug( "#mail - mail send cotroller called" );
+		LOG.info( "#mail - mail send cotroller called" );
+		LOG.warn( "#mail - mail send cotroller called" );
+		LOG.error( "#mail - mail send cotroller called" );
+		
 		boolean existAttend = false;
 		MailSender mailSender = new MailSender();
 		
@@ -174,7 +180,7 @@ public class ProjectController {
 		} catch (Exception e) {
 			System.out.println(e.toString());
 			LOG.error( "#mail - mail send fail" );
-			return JsonResult.success(e.toString());
+			return JsonResult.success("mail send failed : " + e.toString());
 		}
 		
 		return JsonResult.success(map);
