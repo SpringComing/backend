@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -35,6 +37,12 @@ import springcome.vo.UserVo;
 @RestController("ProjectApiController")
 @RequestMapping("/api/project")
 public class ProjectController {
+	
+	/**
+	 *  Logger 생성
+	 */
+	private static final Log LOG = LogFactory.getLog( ProjectController.class );
+	
 	@Autowired
 	private ProjectService projectService;
 	
@@ -161,9 +169,11 @@ public class ProjectController {
 		
 		//초대 이메일 보내기
 		try {
+			LOG.info( "#mail - mail send start" );
 			mailSender.sendInvitationMail(email,sender);
 		} catch (Exception e) {
 			System.out.println(e.toString());
+			LOG.error( "#mail - mail send fail" );
 			return JsonResult.success(e.toString());
 		}
 		
