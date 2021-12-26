@@ -142,12 +142,6 @@ public class ProjectController {
 			return JsonResult.fail("세면 만료");
 		}
 		
-		
-		LOG.debug( "#mail - mail send cotroller called" );
-		LOG.info( "#mail - mail send cotroller called" );
-		LOG.warn( "#mail - mail send cotroller called" );
-		LOG.error( "#mail - mail send cotroller called" );
-		
 		boolean existAttend = false;
 		MailSender mailSender = new MailSender();
 		

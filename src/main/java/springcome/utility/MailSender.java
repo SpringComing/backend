@@ -31,7 +31,7 @@ public class MailSender {
 		mail.setPort(587); // 구글 SMTP서버 포트번호
 		mail.setUsername("coder7968@gmail.com"); // 보내는 Gmail 아이디
 		//mail.setPassword("dbfla2101019"); // 보내는 Gmail 비밀번호
-		mail.setPassword("wpjxgaybzyvhkrqo"); // 보내는 Gmail 비밀번호
+		mail.setPassword("wpjxgaybzyvhkrqo"); // 보내는 Gmail 비밀번호 (2차 인증 사용시)
 		mail.setDefaultEncoding("UTF-8"); // 인코딩 정보
 		Properties prop = new Properties();
 		prop.setProperty("mail.smtp.auth", "true");
