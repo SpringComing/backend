@@ -12,7 +12,7 @@
     <meta charset="utf-8">
     <title>Spring is Coming</title>
     <link href="${pageContext.request.contextPath }/assets/css/index.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="${pageContext.request.contextPath }/assets/images/favicon.ico">
+    <link rel="shortcut icon" href="${pageContext.request.contextPath }/assets/images/springcome.ico">
 </head>
 <body>
   <div id="root"></div>
