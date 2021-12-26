@@ -100,11 +100,20 @@
 		where project_no = #{projectNo }
 		]]>
 	</update>
+	
 	<select id="findAllUserNoByProjectNo" resultType="long" parameterType="long">
 		<![CDATA[
 		select user_no
 		from attend
 		where project_no = #{projectNo } 
+		]]>
+	</select>
+
+	<select id="findGuestByEmail" resultType="guestvo" parameterType="string">
+		<![CDATA[
+		select no, email, project_no as projectNo
+		from guest
+		where email = #{email } 
 		]]>
 	</select>
 </mapper>

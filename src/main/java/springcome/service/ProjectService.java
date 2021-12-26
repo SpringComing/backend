@@ -59,7 +59,16 @@ public class ProjectService {
 	}
 
 	public boolean addGuest(String email, Long projectNo) {
-		return projectRepository.insertGuest(email, projectNo);
+		List<GuestVo> guestVoList = projectRepository.findGuestByEmail(email);
+		//System.out.println("--------------------------------------------------------guestVoList : " + guestVoList);
+		
+		if(guestVoList != null && guestVoList.isEmpty()) {
+			//System.out.println("--------------------------------------------------------insertGuest 실행 ");
+			return projectRepository.insertGuest(email, projectNo);
+		}
+		
+		return true;
+	}
 	}
 
 	public boolean deleteGuest(Long userNo) {

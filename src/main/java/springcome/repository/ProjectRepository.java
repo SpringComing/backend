@@ -84,5 +84,9 @@ public class ProjectRepository {
 		return sqlSession.selectOne("project.findByProjectNo", no);
 	}
 
+	public List<GuestVo> findGuestByEmail(String email) {
+		return sqlSession.selectList("project.findGuestByEmail",email);
+	}
+
 }
 

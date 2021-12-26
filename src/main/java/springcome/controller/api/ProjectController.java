@@ -164,7 +164,7 @@ public class ProjectController {
 			mailSender.sendInvitationMail(email,sender);
 		} catch (Exception e) {
 			System.out.println(e.toString());
-			return JsonResult.fail(e.toString());
+			return JsonResult.success(e.toString());
 		}
 		
 		return JsonResult.success(map);
