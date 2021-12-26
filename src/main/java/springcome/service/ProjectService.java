@@ -69,7 +69,7 @@ public class ProjectService {
 		
 		return true;
 	}
-	}
+	
 
 	public boolean deleteGuest(Long userNo) {
 		return projectRepository.deleteGuest(userNo);
