@@ -32,9 +32,7 @@ public class ProjectService {
 
 	public boolean updateBasicProject( Long userNo, ProjectVo projectVo) {
 		
-		if(projectRepository.updateBasicAtAttend(userNo,projectVo) == false) {
-			return false;
-		}
+		projectRepository.updateBasicAtAttend(userNo,projectVo);
 		
 		return projectRepository.updateBasic( projectVo);
 	}
