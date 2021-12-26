@@ -29,10 +29,10 @@ public class SessionController {
 		if(principalDetails == null || checkCookie == null) {
 
 
-			return "redirect:http://localhost:8080/loginForm";
+			return "loginForm";
 
 		}else {
-			return "/main";
+			return "/";
 		}
 
 	}
