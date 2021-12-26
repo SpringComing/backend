@@ -50,8 +50,16 @@
 	<update id ="updateBasic" parameterType="projectvo">
 		<![CDATA[
 		update project
-		set name = #{name }, description = #{description }, start_date = #{startDate } , end_date = #{endDate } 
+		set name = #{name }, description = #{description }, start_date = #{startDate } , end_date = #{endDate } , color=#{color }
 		where no = #{ no }
+		]]>
+	</update>
+	
+	<update id ="updateBasicAtAttend" parameterType="map">
+		<![CDATA[
+		update attend
+		set  color=#{color }
+		where user_no = #{userNo } and project_no = #{ projectNo }
 		]]>
 	</update>
 

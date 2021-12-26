@@ -99,11 +99,17 @@ public class ProjectController {
 	 * 기능: 프로젝트 기본내용 업데이트 
 	 */
 	@PutMapping("")
-	public JsonResult updateBasicProject(@RequestBody ProjectVo projectVo) {
+	public JsonResult updateBasicProject(@AuthenticationPrincipal PrincipalDetails principalDetails,
+										 @RequestBody ProjectVo projectVo) {
+		if(principalDetails == null) {
+			System.out.println("-------------------------------------------------------- 세션 만료");
+			return JsonResult.fail("세면 만료");
+		}
+		
 		boolean result = false;
 		//System.out.println("-------------------------------------------------update projectVo"+ projectVo);
 		
-		result = projectService.updateBasicProject( projectVo);
+		result = projectService.updateBasicProject(principalDetails.getNo(), projectVo);
 		
 		return JsonResult.success(result);
 	}
