@@ -33,10 +33,10 @@
 	
 	
 	<!--
-		com.douzone.mysite.exception 아래 패키지 로그들만  \log-mysite\logex2.log 파일에만  출력하는 로거
+		<logger name="" 여기 적은 경로 아래 패키지 로그들만  /springcome-log/exception.log 파일에만  출력하는 로거
 	-->
 	                <!-- 디버그레벨로 설정 debug -> info -> warn -> error  실행 -->
-	<logger name="com.douzone.jblog.exception" level="error" additivity="false">
+	<logger name="springcome" level="debug" additivity="false">
             <appender-ref ref="fileAppender" />
     </logger>
         
@@ -44,7 +44,6 @@
 	<!-- 루트(글로벌) 로거 -->
 	<root level="debug">
 		<appender-ref ref="consoleAppender" />
-        <appender-ref ref="fileAppender" />
 	</root>
 
 </configuration>
