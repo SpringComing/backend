@@ -88,16 +88,5 @@ public class ProjectRepository {
 		return sqlSession.selectList("project.findGuestByEmail",email);
 	}
 
-	public boolean updateBasicAtAttend(Long userNo, ProjectVo projectVo) {
-		if(projectVo == null) {
-			return false;
-		}
-		Map<String, Object> map = new HashMap<>();
-		map.put("userNo", userNo);
-		map.put("projectNo", projectVo.getNo());
-		map.put("color", projectVo.getColor());
-		return sqlSession.update("project.updateBasicAtAttend", map) == 1;
-	}
-
 }
 

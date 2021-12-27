@@ -25,7 +25,11 @@ public class ProjectService {
 
 		Long lastSequence = projectRepository.findLastSequence(userNo);
 		
-		result = projectRepository.insertAttend(userNo, projectVo.getNo(), "ADMIN", lastSequence + 1);
+		if(lastSequence == null) {
+			result = projectRepository.insertAttend(userNo, projectVo.getNo(), "ADMIN", 0L);
+		} else {
+			result = projectRepository.insertAttend(userNo, projectVo.getNo(), "ADMIN", lastSequence + 1);
+		}
 		
 		return result;
 	}
