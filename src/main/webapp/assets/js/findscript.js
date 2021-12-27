@@ -1,7 +1,7 @@
 var timer;
 var email;
 var type;
-const SERVER_URL = "http://localhost:8080";
+const SERVER_URL = "http://34.64.73.89:8080";
 /*
 * 함수: msg_time
 * 작성자: 이동현
