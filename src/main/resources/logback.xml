@@ -44,7 +44,6 @@
 	<!-- 루트(글로벌) 로거 -->
 	<root level="debug">
 		<appender-ref ref="consoleAppender" />
-		<appender-ref ref="fileAppender" />
 	</root>
 
 </configuration>
